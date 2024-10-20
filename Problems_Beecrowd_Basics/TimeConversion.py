@@ -1,0 +1,5 @@
+value = int(input())
+hours = int(value/3600)
+minutes = int((value%3600)/60)
+seconds = int(value%60)
+print(hours, minutes, seconds, sep=":")
