@@ -1,3 +1,4 @@
+
 #coding: utf-8
 
 from ClassePasta import *
@@ -15,22 +16,25 @@ def CriarPasta(QdeArquivos=5):
 def CriarArquivo(): 
 	Arq1 = ArquivoPastaSuspensa("amarelo", "Pesquisa",NumMaxPastas=20)		
 	return Arq1
-	
-def MostrarPastas(Pastas):
-	for i, j in enumerate(Pastas):
-		print(f"Pasta (i) com conteudo{j.content} ")
-		for c,k in j.documento.items():
-			print(f"\t chave {c} e valor {k}")
 
+def MostrarPastas(Pastas): 
+	for i, j in enumerate(Pastas): 
+		print(f"Pasta {i} com conteudo {j.conteudo} ")
+		for c,k in j.documento.items(): 	
+			print(f"\t chave {c} e valor {k}")
+	
+	
 if __name__ == "__main__": 
-	ArquivoDePastas = []
-	arq1 = CriarArquivo()
+	
+	ArquivosDePastas = []
+	Arquivo1 = CriarArquivo()
 	NumPastasCriadas = 2
-	for _ in range(NumPastasCriadas):
+	for _ in range(NumPastasCriadas): 
 		PastaSuspensa = CriarPasta()
-		arq1.Pastas.append(PastaSuspensa)
-		t.sleep(1.2) #Programa para por 1.2 segundos para que mude o momento unix
+		Arquivo1.Pastas.append(PastaSuspensa)
+		t.sleep(1.2) #O programa vai parar por 1.2 segundos para mudar o momento unix
 		print("Mudanca de pasta")
+	print("Mostrando o arquivo de pasta suspensa")	
+	MostrarPastas(ArquivosDePastas)
 	print()
-	MostrarPastas(ArquivoDePastas)
-	GravarArquivoPastaSuspensa()
+	Arquivo1.GravarArquivoPastaSuspensa()
